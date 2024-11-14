@@ -26,19 +26,19 @@ const Taskform = ({ addTask }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <input className='back-color'
         type="text"
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
       />
-      <textarea
+      <textarea className='back-color'
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <input
+      <input className='back-color'
         type="date"
         value={dueDate}
         onChange={(e) => setDueDate(e.target.value)}

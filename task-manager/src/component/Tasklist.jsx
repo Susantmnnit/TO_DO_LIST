@@ -59,12 +59,14 @@ const Tasklist = ({ title, tasks, updateTask, deleteTask }) => {
               </div>
             ) : (
               // Display Task
-              <div>
-                <h4>{task.title}</h4>
-                <p>{task.description}</p>
-                <p>Due Date: {task.dueDate}</p>
-                <p>Priority: {task.priority}</p>
-                <button onClick={() => updateTask({ ...task, completed: !task.completed })}>
+              <div className='back-color'>
+                <h4 className='back-color app-text'>{task.title}</h4>
+                <p className='back-color task-desc'>{task.description}</p>
+                  <div className='list-foot'>
+                    <p className='back-color'>Priority: {task.priority}</p>
+                    <p className='back-color'>Due Date: {task.dueDate}</p>
+                  </div>
+                <button onClick={() => updateTask({ ...task, completed: !task.completed })} >
                   {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
                 </button>
                 <button onClick={() => startEditing(task)}>Edit</button>

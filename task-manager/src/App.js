@@ -32,10 +32,10 @@ function App() {
   return (
     <div className="App">
       {/* for all task to add */}
-      Add task
+      <h4 className="app-text">Add task</h4>
       <Taskform addTask={addTask} />
       {/* dashboard */}
-      Dashboard
+      <h4 className="app-text">Tasks</h4>
       <Dashboard
         tasks={tasks}
         updateTask={updateTask}
